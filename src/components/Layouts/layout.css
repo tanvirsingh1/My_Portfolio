@@ -6,12 +6,12 @@
 .sidebar {
     height: 100vh;
     background-color: #1e1e2c;
-    width: 90px;
+    width: 120px;
     position: fixed;
 }
 
 .sidebar-toggle {
-    width: 200px;
+    width: 250px;
 }
 
 .sidebar-toggle-icons {
