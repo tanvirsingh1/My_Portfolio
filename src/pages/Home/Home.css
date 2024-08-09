@@ -1,0 +1,50 @@
+.home-container {
+    height: 300px;
+    color: white;
+}
+
+.home-content h2 {
+    padding: 5px;
+    padding-top: 70px;
+    /* margin-left: 150px; */
+}
+
+.home-content h1 {
+    color: #04D9FF;
+    padding: 5px;
+    /* margin-left: 150px; */
+}
+
+.home-buttons {
+    /* margin-left: 150px; */
+    margin-top: 20px;
+    display: flex;
+    gap: 10px
+}
+
+.home-buttons .btn-hire {
+    border-color: #04D9FF;
+    color: white;
+    width: 120px;
+    font-weight: 500;
+}
+
+.home-buttons .btn-hire:hover {
+    background-color: #04D9FF;
+    color: black;
+    width: 120px;
+}
+
+.home-buttons .btn-cv {
+    border-color: #04D9FF;
+    color: white;
+    width: 120px;
+    font-weight: 500;
+}
+
+.home-buttons .btn-cv:hover {
+    background-color: #04D9FF;
+    color: black;
+    width: 120px;
+
+}

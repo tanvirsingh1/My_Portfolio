@@ -23,7 +23,7 @@ const Menu = ({ toggle }) => {
                         transition={{ duration: 1 }}
                     >
                         <img
-                            src={require('../Images/profile-pic.JPG')}
+                            src={require('../../assets/Images/profile-pic.JPG')}
                             width="150" height="150"
                             alt="profile pic"
                         />
