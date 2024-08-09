@@ -134,7 +134,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcHome />
+                                    <FcHome title="Home" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -145,7 +145,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcAbout />
+                                    <FcAbout title="About" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -156,7 +156,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcReadingEbook />
+                                    <FcReadingEbook title="Education" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -167,7 +167,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcBiotech />
+                                    <FcBiotech title="Tech Stack" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -178,7 +178,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcVideoProjector />
+                                    <FcVideoProjector title="Projects" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -189,7 +189,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcPortraitMode />
+                                    <FcPortraitMode title="Experience" />
                                 </Link>
                             </div>
                             <div className="nav-link">
@@ -200,7 +200,7 @@ const Menu = ({ toggle }) => {
                                     offset={-100}
                                     duration={100}
                                 >
-                                    <FcBusinessContact />
+                                    <FcBusinessContact title="Contact" />
                                 </Link>
                             </div>
                         </div>
