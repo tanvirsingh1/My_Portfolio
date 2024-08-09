@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "../../pages/Home/Home";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import "./layout.css";
-import Menu from "../Menus/Menu";
+import Menus from "../Menus/Menu";
 
 const Layout = () => {
     const [toggle, setToggle] = useState(true);
@@ -24,7 +24,7 @@ const Layout = () => {
                             )}
                         </p>
                     </div>
-                    <Menu toggle={toggle} />
+                    <Menus toggle={toggle} />
                 </div>
                 <div className="container">
                     <Home />
