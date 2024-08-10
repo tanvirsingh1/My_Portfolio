@@ -1,11 +1,18 @@
 
 import Layout from "./components/Layouts/layout";
+import About from "./pages/About/about";
 
 function App() {
   return (
-    <div >
-      <h1> <Layout /></h1>
-    </div>
+    < >
+      <Layout />
+      <div className="container">
+        <About />
+
+
+      </div>
+
+    </>
   );
 }
 
