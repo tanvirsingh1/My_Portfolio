@@ -2,7 +2,7 @@
 import Layout from "./components/Layouts/layout";
 import About from "./pages/About/about";
 import TechStack from "./pages/TechStack/TechStack";
-
+import Project from "./pages/Projects/Project";
 function App() {
   return (
     < >
@@ -10,6 +10,7 @@ function App() {
       <div className="container">
         <About />
         <TechStack />
+        <Project />
       </div>
 
     </>
