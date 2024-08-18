@@ -57,11 +57,16 @@ const Contact = () => {
                             <div className="card2 d-flex card border-0 px-4 py-5">
                                 <div className="row">
                                     <div className="row">
-                                        <h6>
+                                        <h6 className="Socials">
                                             Contact With
-                                            <BsLinkedin color="blue" size={30} className="ms-2" />
-                                            <BsGithub color="black" size={30} className="ms-2" />
-                                            <BsFacebook color="blue" size={30} className="ms-2" />
+                                            <a href="https://www.linkedin.com/in/tanvir-singh-b66471293/" target="_blank" rel="noopener noreferrer">
+                                                <BsLinkedin color="blue" size={30} className="ms-2" />
+                                            </a>
+                                            <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer">
+                                                <BsGithub color="black" size={30} className="ms-2" />
+                                            </a>
+
+
                                         </h6>
                                     </div>
 
