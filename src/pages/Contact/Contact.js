@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
-import axios from "axios";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 const Contact = () => {
@@ -8,32 +8,34 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [msg, setMsg] = useState("");
 
-    //handle submit button
-    const handleSubmit = async (e) => {
+
+    // Handle submit button
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            if (!name || !email || !msg) {
-                toast.error("PLease Provide all fields");
-            }
-            const res = await axios.post("/api/v1/portfolio/sendEmail", {
-                name,
-                email,
-                msg,
-            });
-            //validation success
-            if (res.data.success) {
-                toast.success(res.data.message);
+
+        if (!name || !email || !msg) {
+            toast.error("Please provide all fields");
+            return;
+        }
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: msg,
+        };
+
+        emailjs.send("service_id", "template_id", templateParams, "user_id")
+            .then((response) => {
+                toast.success("Message sent successfully!");
                 setname("");
                 setEmail("");
                 setMsg("");
-            } else {
-                toast.error(res.data.message);
-            }
-        } catch (error) {
-            console.log(error);
-        }
+            })
+            .catch((error) => {
+                toast.error("Failed to send message.");
+                console.error("EmailJS error:", error);
+            });
     };
-
     return (
         <>
             <div className=" contact" id="contact">
