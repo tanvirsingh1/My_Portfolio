@@ -1,6 +1,6 @@
 .work {
     background-color: rgba(128, 128, 128, 0.101);
-    margin-left: 200px;
+    margin-left: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
 
 /* ===== DARK MODE ========== */
 #dark .work {
-    background-color: #643a6b;
+    background-color: gray;
 }
 
 #dark .work-exp h2 {

@@ -1,7 +1,7 @@
 .about {
     margin: 30px 0px;
     padding: 20px;
-    margin-left: 200px;
+    margin-left: 150px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
     justify-content: center;
@@ -33,4 +33,16 @@
 .about-content p {
     text-align: justify;
     padding: 10px;
+}
+
+/* ======== DARK MODE ========= */
+
+#dark .about {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#dark .about-content h1 {
+    color: #b0a4a4;
+    border-bottom: 2px solid #b0a4a4;
 }
