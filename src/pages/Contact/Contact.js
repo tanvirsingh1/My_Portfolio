@@ -24,8 +24,7 @@ const Contact = () => {
             setSuccessMessage('Your message has been sent successfully!');
             setTimeout(() => {
                 setSuccessMessage('');
-            }, 5000); // Hide the message after 5 seconds
-
+            }, 2000);
 
         } catch (error) {
             console.log('Failed to send email.', error);

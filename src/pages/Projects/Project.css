@@ -1,6 +1,6 @@
 .project {
     margin: 50px 0px;
-    margin-left: 160px;
+    margin-left: 140px;
 }
 
 .project hr {
@@ -15,7 +15,7 @@
 }
 
 #ads {
-    margin: 30px 30px 30px 0px;
+    margin: 30px 40px 30px 0px;
 }
 
 #ads .card-notify-badge {
