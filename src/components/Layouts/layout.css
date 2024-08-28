@@ -1,5 +1,6 @@
 .sidebar-section {
     display: flex;
+    width: 100%;
     background-color: black;
 }
 
@@ -27,11 +28,8 @@
     margin-top: 10px;
 }
 
-.container {
-    margin-left: 100px;
-    /* Adjust this value to match the width of the sidebar */
 
-}
+
 
 /* ==== MOBILE VIEW ========== */
 @media (max-width: 600px) {

@@ -23,7 +23,7 @@ const WorkExp = () => {
                                 borderRight: "7px solid  white",
                             }}
                             date="2021 - present"
-                            iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+                            iconStyle={{ background: "#04D9FF", color: "#fff" }}
                             icon={<SiReact />}
                         >
                             <h3 className="vertical-timeline-element-title">
@@ -47,7 +47,7 @@ const WorkExp = () => {
                                 borderRight: "7px solid  white",
                             }}
                             date="(May - Aug)2024"
-                            iconStyle={{ background: "#1e1e2c", color: "#fff" }}
+                            iconStyle={{ background: "#04D9FF", color: "#fff" }}
                             icon={<SiReact />}
                         >
                             <h3 className="vertical-timeline-element-title">

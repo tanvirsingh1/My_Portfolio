@@ -1,6 +1,6 @@
 .work {
     background-color: rgba(128, 128, 128, 0.101);
-    margin-left: 150px;
+    margin-left: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,11 +15,11 @@
 
 .work-exp h2 {
     font-weight: bold;
-    color: #1e1e2c;
+    color: gray;
 }
 
 .work-exp hr {
-    color: #138781;
+    color: gray;
     width: 400px;
     margin: 10px auto;
 }

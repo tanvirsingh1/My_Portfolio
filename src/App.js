@@ -9,11 +9,13 @@ import Contact from "./pages/Contact/Contact";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./Context/ThemeContext";
 import './App.css'
+import MobileNav from "./components/MobileNav/MobileNav";
 function App() {
   const [theme] = useTheme();
   return (
     < >
       <div id={theme}>
+        <MobileNav />
         <Layout />
         <div className="container">
           <About />
@@ -25,7 +27,7 @@ function App() {
         </div>
         <div className="footer pb-3 ms-3">
 
-          <h4 className="text-center">Made With 😍 Tanvir &copy; 2024</h4>
+
 
         </div>
         <ScrollToTop

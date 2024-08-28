@@ -5,6 +5,7 @@ import "./Home.css";
 import { motion } from "framer-motion";
 import { useTheme } from "../../Context/ThemeContext";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 const Home = () => {
     const [theme, setTheme] = useTheme()
     const handleTheme = () => {
@@ -44,14 +45,19 @@ const Home = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <div className="home-buttons">
-                            <a
+                            <Link
                                 className="btn btn-hire"
-                                href="https://api.whatsapp.com/send?phone=1234567890"
-                                rel="noreferrer"
-                                target="_blank"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={100}
                             >
+
                                 Hire Me
-                            </a>
+                            </Link>
+
+
                             <a className="btn btn-cv" href={Resume} download="Tanvir.pdf">
                                 My Resume
                             </a>
