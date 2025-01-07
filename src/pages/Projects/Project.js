@@ -11,10 +11,10 @@ const Project = () => {
                 </h2>
                 <hr />
                 <p className="pb-3 text-center">
-                    <p>Top 6 Projects, check out <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer">github</a> for more projects.</p>
+                    <p>Top 8 Projects, check out <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer">github</a> for more projects.</p>
                 </p>
                 {/* card design */}
-                <div className="row" id="ads">
+                <div className="row d-flex justify-content-center" id="ads">
 
 
 
@@ -199,6 +199,65 @@ const Project = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="col-md-4 Second-row">
+                            <div className="card rounded">
+                                <div className="card-image">
+                                    <span className="card-notify-badge">Machine Learning</span>
+                                    <img
+                                        src="https://www.revechat.com/wp-content/uploads/2021/08/What-is-sentiment-analysis.png"
+                                        alt="project7"
+                                    />
+                                </div>
+                                <div className="card-image-overly m-auto mt-3">
+                                    <span className="card-detail-badge">Logistic Regression</span>
+                                    <span className="card-detail-badge">Model Training</span>
+                                    <span className="card-detail-badge">LLM Libraries</span>
+                                    <span className="card-detail-badge">StreamLit</span>
+                                </div>
+                                <div className="card-body text-center">
+                                    <div className="ad-title m-auto">
+                                        <h5 className="text-uppercase">Sentiment Analysis Bot</h5>
+                                    </div>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://github.com/tanvirsingh1/Sentiment_bot.git"
+                                    >
+                                        View
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-md-4 Second-row">
+                            <div className="card rounded">
+                                <div className="card-image">
+                                    <span className="card-notify-badge">Game Theory</span>
+                                    <img
+                                        src="data:image/png;base64,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"
+                                        alt="project7"
+                                    />
+                                </div>
+                                <div className="card-image-overly m-auto mt-3">
+                                    <span className="card-detail-badge">Python</span>
+                                    <span className="card-detail-badge">Tree Traversal</span>
+                                    <span className="card-detail-badge">Monte Carlo Search</span>
+                                    <span className="card-detail-badge">Heuritsic Analysis</span>
+                                </div>
+                                <div className="card-body text-center">
+                                    <div className="ad-title m-auto">
+                                        <h5 className="text-uppercase">Connect State Game</h5>
+                                    </div>
+                                    <a
+                                        className="ad-btn"
+                                        href="https://github.com/tanvirsingh1/ConnectState.git"
+                                    >
+                                        View
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
