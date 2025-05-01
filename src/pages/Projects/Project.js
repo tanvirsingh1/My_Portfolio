@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./Project.css";
 
 const Project = () => {
@@ -14,7 +13,7 @@ const Project = () => {
                     <p>Top 8 Projects, check out <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer">github</a> for more projects.</p>
                 </p>
                 {/* card design */}
-                <div className="row d-flex justify-content-center" id="ads">
+                <div className="row justify-content-center" id="ads">
 
 
 
@@ -47,7 +46,7 @@ const Project = () => {
                                     </div>
                                     <a
                                         className="ad-btn"
-                                        href="https://github.com/tanvirsingh1/Capstone"
+                                        href="https://capstone-ui-navy.vercel.app/login"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
