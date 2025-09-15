@@ -18,13 +18,14 @@ const About = () => {
                     <div className='col-md-6 col-xl-6 col-lg-6 col-xs-12 about-content'>
 
                         <h2>About me</h2>
-                        <p>Hello! I’m Tanvir Singh, a passionate 4th-year Computer Science student at Seneca College. My journey in technology and data engineering began with a deep curiosity and has since blossomed into a profound dedication to leveraging the power of tech for innovative solutions.
+                        <p>Hello! I’m Tanvir Singh, a Computer Science graduate from Seneca College with a passion for software development, AI, and machine learning.
 
-                            Throughout my academic career, I’ve embraced opportunities to blend web technologies with the MERN stack, automate processes using cloud solutions, and dive deep into data analysis. Each project I undertake reflects my enthusiasm for solving complex problems and pushing the boundaries of what's possible.
+                            Throughout my journey in technology, I’ve transformed my curiosity into a commitment to building innovative, data-driven solutions. I’ve worked with the MERN stack to create full-stack applications, explored cloud technologies for scalable automation, and applied data analysis techniques to solve complex challenges.
 
-                            When I'm not immersed in code or exploring the latest tech trends, I cherish spending quality time with my family and friends. I also have a keen interest in the stock market and actively seek to educate myself to achieve financial stability.
+                            When I’m not immersed in code, I enjoy spending time with family and friends and learning about the stock market to build financial knowledge.
 
-                            My goal is to continuously evolve in the tech world and contribute to meaningful advancements while maintaining a balanced and fulfilling life.</p>
+                            My goal is to continue growing in the tech world, push the boundaries of what’s possible, and contribute to meaningful advancements.</p>
+
                     </div>
                 </div>
             </div>
