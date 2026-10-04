@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Tanvir Singh | Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal portfolio site: I'm a Data Analyst in Toronto working on analytics, data pipelines and AI automation.
 
-## Available Scripts
+**Live site:** [my-portfolio-opal-pi-52.vercel.app](https://my-portfolio-opal-pi-52.vercel.app)
 
-In the project directory, you can run:
+## What's on the site
 
-### `npm start`
+- **About**: who I am and what I work on
+- **Work Experience**: Hotspex Media, CBV Collection Services, CGI
+- **Projects**: fraud analytics, agentic AI workflows, RAG chatbot, ML and DevOps projects, each linked to its repo
+- **Skills**: grouped into analytics, BI, AI & automation, data pipelines, marketing data, and development & testing
+- **Education**, **Awards & Leadership**, and a **Contact** form
+- Light and dark mode, plus a downloadable resume
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18 (Create React App)
+- Bootstrap 5 for layout
+- Framer Motion, typewriter-effect, react-vertical-timeline-component and react-scroll for animation and navigation
+- react-icons for icons
+- EmailJS for the contact form
+- Google Tag Manager for analytics
+- Deployed on Vercel
 
-### `npm test`
+## Run it locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requires Node.js 24.x (pinned in `package.json`).
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The site runs at [http://localhost:3000](http://localhost:3000).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To create a production build in `build/`:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+### Environment variables
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The contact form uses EmailJS. Create a `.env` file in this folder with:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`.env` is git-ignored. On Vercel, set the same variables under Project Settings → Environment Variables.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Updating content
 
-## Learn More
+Most content lives in data arrays, so you rarely need to change any markup:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Section | File |
+| --- | --- |
+| Work experience | `src/pages/workExp/WorkExp.js` (`jobs` array) |
+| Projects | `src/pages/Projects/Project.js` (`projects` array) |
+| Skills | `src/utils/Techstacklist.js` |
+| Awards & leadership | `src/pages/Awards/Awards.js` |
+| Menu items and order | `src/utils/navItems.js` (keep in the same order as `src/App.js`) |
+| About text | `src/pages/About/about.js` |
+| Resume download | `src/assets/docs/Resume.pdf` |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- LinkedIn: [tanvir-singh-b66471293](https://www.linkedin.com/in/tanvir-singh-b66471293/)
+- GitHub: [tanvirsingh1](https://github.com/tanvirsingh1)
+- Email: tnvir2182002@gmail.com
