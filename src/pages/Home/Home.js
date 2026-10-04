@@ -28,16 +28,19 @@ const Home = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2>Hi 👋 I'm a</h2>
+                        <h2>Hi, I'm Tanvir Singh</h2>
                         <h1>
                             <Typewriter
                                 options={{
-                                    strings: ["Data Analyst!", "Analytics Engineer!", "AI Automation Builder!"],
+                                    strings: ["Data Analyst", "Analytics Engineer", "AI Automation Builder"],
                                     autoStart: true,
                                     loop: true,
                                 }}
                             />
                         </h1>
+                        <p className="home-subtext">
+                            I turn messy marketing and business data into dashboards, pipelines and AI automations teams actually use.
+                        </p>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}

@@ -1,4 +1,5 @@
-.work {
+/* Shared timeline section: used by Work Experience and Education */
+.timeline-section {
     --exp-accent: #04D9FF;
     --exp-title: #0f6e69;
     --exp-text: #2b2d36;
@@ -11,11 +12,11 @@
     --exp-shadow: 0 10px 30px -12px rgba(30, 30, 44, 0.18);
 
     background-color: rgba(128, 128, 128, 0.101);
-    margin-left: 180px;
+    margin: 50px 0px 50px 180px;
     padding: 0px 20px;
 }
 
-#dark .work {
+#dark .timeline-section {
     --exp-title: #5fd6cf;
     --exp-text: #e9e4d6;
     --exp-muted: #a9a59b;
@@ -29,22 +30,22 @@
     background-color: rgba(255, 255, 255, 0.04);
 }
 
-.work-exp {
+.timeline-inner {
     max-width: 920px;
     margin: 0 auto;
     padding: 60px 0px 80px;
 }
 
-.work-exp h2 {
+.timeline-inner h2 {
     font-weight: bold;
     color: gray;
 }
 
-#dark .work-exp h2 {
+#dark .timeline-inner h2 {
     color: white;
 }
 
-.work-exp hr {
+.timeline-inner hr {
     color: gray;
     width: 400px;
     margin: 10px auto 50px;
@@ -122,7 +123,10 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 16px;
-    margin-bottom: 14px;
+}
+
+.exp-header + * {
+    margin-top: 14px;
 }
 
 .exp-company {
@@ -249,13 +253,13 @@
 }
 
 @media (max-width: 600px) {
-    .work {
+    .timeline-section {
         margin: 0;
         margin-top: 50px;
         padding: 0px 12px;
     }
 
-    .work hr {
+    .timeline-inner hr {
         width: 280px;
     }
 

@@ -16,9 +16,11 @@ const Menu = ({ toggle }) => {
                     >
                         <img
                             src={require('../../assets/Images/profile-pic.JPG')}
-                            width="150" height="150"
-                            alt="profile pic"
+                            width="112" height="112"
+                            alt="Tanvir Singh"
                         />
+                        <p className="navbar-name">Tanvir Singh</p>
+                        <p className="navbar-title">Data Analyst</p>
                     </motion.div>
                     <motion.div
                         className="nav-items"

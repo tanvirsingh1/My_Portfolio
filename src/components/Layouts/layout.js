@@ -16,13 +16,18 @@ const Layout = () => {
             <div className="sidebar-section">
                 <div className={toggle ? "sidebar-toggle sidebar" : "sidebar"}>
                     <div className="sidebar-toggle-icons">
-                        <p onClick={handleToggle}>
+                        <button
+                            type="button"
+                            className="sidebar-toggle-btn"
+                            onClick={handleToggle}
+                            aria-label={toggle ? "Collapse menu" : "Expand menu"}
+                        >
                             {toggle ? (
-                                <AiOutlineDoubleLeft size={30} />
+                                <AiOutlineDoubleLeft size={16} />
                             ) : (
-                                <AiOutlineDoubleRight size={30} />
+                                <AiOutlineDoubleRight size={16} />
                             )}
-                        </p>
+                        </button>
                     </div>
                     <Menus toggle={toggle} />
                 </div>
