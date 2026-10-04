@@ -31,9 +31,31 @@
     font-weight: 700;
 }
 
-.project .card img {
+.project-banner {
     height: 150px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    color: white;
+    background: linear-gradient(135deg, #003366, #04D9FF);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.project-col {
+    margin-bottom: 40px;
+}
+
+.project-description {
+    font-size: 15px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.card-image-overly .card-detail-badge {
+    margin-bottom: 6px;
+    font-size: 13px;
 }
 
 .card-detail-badge {

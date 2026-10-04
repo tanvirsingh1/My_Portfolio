@@ -32,7 +32,7 @@ const Home = () => {
                         <h1>
                             <Typewriter
                                 options={{
-                                    strings: ["Software Engineer!"],
+                                    strings: ["Data Analyst!", "Analytics Engineer!", "AI Automation Builder!"],
                                     autoStart: true,
                                     loop: true,
                                 }}
@@ -58,7 +58,7 @@ const Home = () => {
                             </Link>
 
 
-                            <a className="btn btn-cv" href={Resume} download="Tanvir.pdf">
+                            <a className="btn btn-cv" href={Resume} download="Resume.pdf">
                                 My Resume
                             </a>
                         </div>

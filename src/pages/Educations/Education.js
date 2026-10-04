@@ -36,10 +36,14 @@ const Education = () => {
                         iconStyle={{ background: "#04D9FF", color: "#fff" }}
                         icon={<MdSchool />}
                     >
-                        <h3 className="vertical-timeline-element-title"> Honors Bachelors in Technology - Software Development</h3>
+                        <h3 className="vertical-timeline-element-title">Honours Bachelor of Technology — Software Development</h3>
                         <h4 className="vertical-timeline-element-subtitle">
-                            Toronto, ON
+                            Seneca Polytechnic, Toronto, ON
                         </h4>
+                        <ul>
+                            <li>GPA: 4.0/4.0</li>
+                            <li>President’s List for academic excellence, 6 consecutive terms</li>
+                        </ul>
                     </VerticalTimelineElement>
                 </VerticalTimeline>
             </div>

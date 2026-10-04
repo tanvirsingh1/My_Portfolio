@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import emailjs from '@emailjs/browser';
 import "./Contact.css";
 import { useState } from "react";
-import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
     const form = useRef();
@@ -40,10 +40,10 @@ const Contact = () => {
                         <div className="card1">
                             <div className="contact-content">
                                 <div className="social-media">
-                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                    <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer" className="social-icon">
                                         <BsGithub />
                                     </a>
-                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+                                    <a href="https://www.linkedin.com/in/tanvir-singh-b66471293/" target="_blank" rel="noopener noreferrer" className="social-icon">
                                         <BsLinkedin />
                                     </a>
                                 </div>

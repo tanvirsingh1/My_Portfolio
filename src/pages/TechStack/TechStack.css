@@ -21,6 +21,21 @@
     cursor: pointer;
 }
 
+.techstack-group {
+    margin-top: 25px;
+}
+
+.techstack-category {
+    color: #138781;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 8px 5px;
+}
+
+.techstack .card h5 {
+    font-size: 17px;
+}
+
 .techstack .tech-icon {
     font-size: 2rem;
     margin-right: 10px;
