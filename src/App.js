@@ -6,6 +6,7 @@ import Project from "./pages/Projects/Project";
 import Education from "./pages/Educations/Education";
 import WorkExp from "./pages/workExp/WorkExp";
 import Contact from "./pages/Contact/Contact";
+import Awards from "./pages/Awards/Awards";
 import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./Context/ThemeContext";
 import './App.css'
@@ -19,10 +20,11 @@ function App() {
         <Layout />
         <div className="container">
           <About />
-          <Education />
-          <TechStack />
-          <Project />
           <WorkExp />
+          <Project />
+          <TechStack />
+          <Education />
+          <Awards />
           <Contact />
         </div>
         <div className="footer pb-3 ms-3">

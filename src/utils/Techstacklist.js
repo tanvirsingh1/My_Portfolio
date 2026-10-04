@@ -1,151 +1,113 @@
-import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap } from "react-icons/bs";
-import { FaNodeJs } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
+import { FaNodeJs, FaJava, FaChartLine, FaDatabase, FaLink, FaRobot } from "react-icons/fa";
+import { TbBrandNextjs, TbSql } from "react-icons/tb";
 import {
+    SiPython,
+    SiPandas,
+    SiNumpy,
+    SiScikitlearn,
+    SiMicrosoftexcel,
+    SiLooker,
+    SiPowerbi,
+    SiTableau,
+    SiAnthropic,
+    SiOpenai,
+    SiGooglegemini,
+    SiPowerautomate,
+    SiDbt,
+    SiMicrosoftazure,
+    SiApachespark,
+    SiMicrosoftsqlserver,
+    SiPostgresql,
+    SiGoogleanalytics,
+    SiGoogleads,
+    SiGoogletagmanager,
+    SiMeta,
+    SiHubspot,
+    SiSalesforce,
+    SiSap,
     SiJavascript,
     SiReact,
-    SiFigma,
-    SiPowerbi,
-    SiMongodb,
-    SiMysql,
-    SiTypescript,
-    SiGithub,
-    SiJenkins,
-    SiFirebase,
+    SiFastapi,
+    SiSelenium,
+    SiRobotframework,
     SiDocker,
-    SiExpress,
-    SiCplusplus,
-    SiAnsible,
-    SiPython,
     SiAmazonaws,
-    SiMicrosoftazure,
-    SiPandas
+    SiGithub,
+    SiJira,
 } from "react-icons/si";
+
+// Grouped to match the skills section of the resume
 export const TechstackList = [
     {
-        _id: 1,
-        name: "C/C++",
-        icon: SiCplusplus,
+        category: "Analytics",
+        items: [
+            { name: "SQL", icon: TbSql },
+            { name: "Python", icon: SiPython },
+            { name: "pandas", icon: SiPandas },
+            { name: "NumPy", icon: SiNumpy },
+            { name: "scikit-learn", icon: SiScikitlearn },
+            { name: "SAS", icon: FaChartLine },
+            { name: "Excel", icon: SiMicrosoftexcel },
+        ],
     },
     {
-        _id: 2,
-        name: "Python",
-        icon: SiPython,
+        category: "Dashboards & Self-Serve Reporting",
+        items: [
+            { name: "Looker", icon: SiLooker },
+            { name: "Looker Studio", icon: SiLooker },
+            { name: "Power BI", icon: SiPowerbi },
+            { name: "Tableau", icon: SiTableau },
+        ],
     },
     {
-        _id: 3,
-        name: "Javascript",
-        icon: SiJavascript,
-
+        category: "AI & Automation",
+        items: [
+            { name: "Claude (Skills, Code, Cowork)", icon: SiAnthropic },
+            { name: "OpenAI API", icon: SiOpenai },
+            { name: "Gemini API", icon: SiGooglegemini },
+            { name: "LangChain", icon: FaLink },
+            { name: "n8n", icon: FaRobot },
+            { name: "Power Automate", icon: SiPowerautomate },
+        ],
     },
     {
-        _id: 4,
-        name: "TypeScript",
-        icon: SiTypescript,
+        category: "Data Pipelines",
+        items: [
+            { name: "dbt", icon: SiDbt },
+            { name: "Adverity", icon: FaDatabase },
+            { name: "Azure Data Factory", icon: SiMicrosoftazure },
+            { name: "Apache Spark", icon: SiApachespark },
+            { name: "SQL Server", icon: SiMicrosoftsqlserver },
+            { name: "PostgreSQL", icon: SiPostgresql },
+        ],
     },
     {
-        _id: 5,
-        name: "HTML",
-        icon: BsFiletypeHtml,
+        category: "Marketing & Business Data",
+        items: [
+            { name: "GA4", icon: SiGoogleanalytics },
+            { name: "Google Ads", icon: SiGoogleads },
+            { name: "Google Tag Manager", icon: SiGoogletagmanager },
+            { name: "Meta CAPI", icon: SiMeta },
+            { name: "HubSpot", icon: SiHubspot },
+            { name: "Salesforce", icon: SiSalesforce },
+            { name: "SAP", icon: SiSap },
+        ],
     },
     {
-        _id: 6,
-        name: "CSS / SCSS",
-        icon: BsFiletypeCss,
-    },
-
-    {
-        _id: 7,
-        name: "Bootstrap",
-        icon: BsBootstrap,
-    },
-    {
-        _id: 8,
-        name: "React JS",
-        icon: SiReact,
-    },
-    {
-        _id: 9,
-        name: "Nextjs",
-        icon: TbBrandNextjs,
-    },
-
-    {
-        _id: 10,
-        name: "React Native ",
-        icon: SiReact,
-    },
-    {
-        _id: 11,
-        name: "Figma ",
-        icon: SiFigma,
-    },
-    {
-        _id: 12,
-        name: "AWS",
-        icon: SiAmazonaws,
-    },
-    {
-        _id: 13,
-        name: "Azure ",
-        icon: SiMicrosoftazure,
-    },
-    {
-        _id: 14,
-        name: "Power BI",
-        icon: SiPowerbi,
-    },
-    {
-        _id: 15,
-        name: "Pandas",
-        icon: SiPandas,
-    },
-    {
-        _id: 16,
-        name: "Node JS ",
-        icon: FaNodeJs,
-    },
-    {
-        _id: 17,
-        name: "Express JS ",
-        icon: SiExpress,
-    },
-
-    {
-        _id: 18,
-        name: "Mongodb ",
-        icon: SiMongodb,
-    },
-    {
-        _id: 19,
-        name: "SQL ",
-        icon: SiMysql,
-    },
-    {
-        _id: 20,
-        name: "Firebase ",
-        icon: SiFirebase,
-    },
-    {
-        _id: 21,
-        name: "Git / Github ",
-        icon: SiGithub,
-    },
-    {
-        _id: 22,
-        name: "Docker ",
-        icon: SiDocker,
-    },
-
-
-    {
-        _id: 23,
-        name: "Jenkins ",
-        icon: SiJenkins,
-    },
-    {
-        _id: 23,
-        name: "Ansible",
-        icon: SiAnsible,
+        category: "Development & Testing",
+        items: [
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "React", icon: SiReact },
+            { name: "Node.js", icon: FaNodeJs },
+            { name: "Next.js", icon: TbBrandNextjs },
+            { name: "FastAPI", icon: SiFastapi },
+            { name: "Java", icon: FaJava },
+            { name: "Selenium", icon: SiSelenium },
+            { name: "Robot Framework", icon: SiRobotframework },
+            { name: "Docker", icon: SiDocker },
+            { name: "AWS", icon: SiAmazonaws },
+            { name: "Git / GitHub", icon: SiGithub },
+            { name: "Jira", icon: SiJira },
+        ],
     },
 ];
