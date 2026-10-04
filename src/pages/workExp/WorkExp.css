@@ -1,16 +1,38 @@
 .work {
+    --exp-accent: #04D9FF;
+    --exp-title: #0f6e69;
+    --exp-text: #2b2d36;
+    --exp-muted: #5f6370;
+    --exp-surface: #ffffff;
+    --exp-border: rgba(30, 30, 44, 0.08);
+    --exp-track: rgba(30, 30, 44, 0.12);
+    --exp-chip-bg: rgba(4, 217, 255, 0.12);
+    --exp-chip-text: #0b5568;
+    --exp-shadow: 0 10px 30px -12px rgba(30, 30, 44, 0.18);
+
     background-color: rgba(128, 128, 128, 0.101);
     margin-left: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0px 20px;
+}
 
+#dark .work {
+    --exp-title: #5fd6cf;
+    --exp-text: #e9e4d6;
+    --exp-muted: #a9a59b;
+    --exp-surface: #16171c;
+    --exp-border: rgba(244, 238, 224, 0.08);
+    --exp-track: rgba(244, 238, 224, 0.14);
+    --exp-chip-bg: rgba(4, 217, 255, 0.14);
+    --exp-chip-text: #8feaff;
+    --exp-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
 
-
+    background-color: rgba(255, 255, 255, 0.04);
 }
 
 .work-exp {
-    padding: 60px 0px;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0px 80px;
 }
 
 .work-exp h2 {
@@ -18,40 +40,249 @@
     color: gray;
 }
 
-.work-exp hr {
-    color: gray;
-    width: 400px;
-    margin: 10px auto;
-}
-
-.work-exp .vertical-timeline-element-title {
-    color: #138781;
-}
-
-.work-exp .vertical-timeline-element-subtitle {
-    color: #1e1e2c78;
-    font-size: 20px;
-}
-
-/* ===== DARK MODE ========== */
-#dark .work {
-    background-color: gray;
-}
-
 #dark .work-exp h2 {
     color: white;
 }
 
+.work-exp hr {
+    color: gray;
+    width: 400px;
+    margin: 10px auto 50px;
+}
+
+/* ===== TIMELINE ===== */
+.exp-timeline {
+    position: relative;
+    padding-left: 44px;
+}
+
+.exp-line {
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--exp-track);
+}
+
+.exp-line-progress {
+    background: var(--exp-accent);
+    transform-origin: top;
+}
+
+.exp-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.exp-item {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.exp-dot {
+    position: absolute;
+    left: -44px;
+    top: 26px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--exp-surface);
+    border: 2px solid var(--exp-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-dot-fill {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--exp-accent);
+}
+
+/* ===== CARD ===== */
+.exp-card {
+    background: var(--exp-surface);
+    color: var(--exp-text);
+    border: 1px solid var(--exp-border);
+    border-radius: 14px;
+    padding: 26px 28px;
+    box-shadow: var(--exp-shadow);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.exp-company {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--exp-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.exp-current {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--exp-chip-text);
+    background: var(--exp-chip-bg);
+    border-radius: 14px;
+    padding: 3px 10px;
+}
+
+.exp-role {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--exp-title);
+    margin: 4px 0 0;
+}
+
+.exp-meta {
+    text-align: right;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.exp-date {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--exp-text);
+    white-space: nowrap;
+}
+
+.exp-location {
+    font-size: 13px;
+    color: var(--exp-muted);
+}
+
+.exp-points {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--exp-text);
+}
+
+.exp-points li {
+    margin-bottom: 6px;
+}
+
+.exp-points li::marker {
+    color: var(--exp-accent);
+}
+
+.exp-points-more {
+    overflow: hidden;
+}
+
+.exp-toggle {
+    background: none;
+    border: none;
+    padding: 4px 0;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--exp-title);
+    cursor: pointer;
+}
+
+.exp-toggle:hover {
+    text-decoration: underline;
+}
+
+.exp-toggle:focus-visible {
+    outline: 2px solid var(--exp-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.exp-tools {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 16px 0 0;
+    border-top: 1px solid var(--exp-border);
+}
+
+.exp-tools li {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--exp-chip-text);
+    background: var(--exp-chip-bg);
+    border-radius: 14px;
+    padding: 4px 12px;
+}
+
 /* =================== */
+@media (max-width: 768px) {
+    .exp-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .exp-meta {
+        text-align: left;
+    }
+
+    .exp-date {
+        white-space: normal;
+    }
+}
 
 @media (max-width: 600px) {
     .work {
         margin: 0;
-        padding: 0;
         margin-top: 50px;
+        padding: 0px 12px;
     }
 
     .work hr {
         width: 280px;
+    }
+
+    .exp-timeline {
+        padding-left: 30px;
+    }
+
+    .exp-line {
+        left: 7px;
+    }
+
+    .exp-dot {
+        left: -30px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .exp-dot-fill {
+        width: 6px;
+        height: 6px;
+    }
+
+    .exp-card {
+        padding: 20px 18px;
+    }
+
+    .exp-company {
+        font-size: 19px;
     }
 }
