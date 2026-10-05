@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { navItems } from "../../utils/navItems";
+import { trackEvent } from "../../utils/analytics";
 import './Menu.css'
 const Menu = ({ toggle }) => {
     return (
@@ -37,6 +38,7 @@ const Menu = ({ toggle }) => {
                                         smooth={true}
                                         offset={-100}
                                         duration={100}
+                                        onClick={() => trackEvent("navigation_click", { menu_item: label, nav_type: "sidebar" })}
                                     >
                                         <Icon />
                                         {label}
@@ -58,6 +60,7 @@ const Menu = ({ toggle }) => {
                                         smooth={true}
                                         offset={-100}
                                         duration={100}
+                                        onClick={() => trackEvent("navigation_click", { menu_item: label, nav_type: "sidebar" })}
                                     >
                                         <Icon title={label} />
                                     </Link>

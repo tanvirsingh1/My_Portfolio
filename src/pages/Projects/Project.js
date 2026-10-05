@@ -10,6 +10,7 @@ import {
     FaRobot,
     FaUserMd,
 } from "react-icons/fa";
+import { trackEvent } from "../../utils/analytics";
 import "./Project.css";
 
 const projects = [
@@ -95,10 +96,23 @@ const Project = () => {
                 </h2>
                 <hr />
                 <p className="pb-3 text-center">
-                    Check out my <a href="https://github.com/tanvirsingh1" target="_blank" rel="noopener noreferrer">GitHub</a> for more projects.
+                    Check out my{" "}
+                    <a
+                        href="https://github.com/tanvirsingh1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => trackEvent("contact_click", {
+                            contact_method: "github",
+                            link_location: "projects_section",
+                            link_url: "https://github.com/tanvirsingh1",
+                        })}
+                    >
+                        GitHub
+                    </a>{" "}
+                    for more projects.
                 </p>
-                <div className="row" id="ads">
-                    {projects.map((project) => (
+                <div className="row" id="project-grid">
+                    {projects.map((project, index) => (
                         <div className="col-md-4 project-col" key={project.title}>
                             <div className="card rounded h-100">
                                 <div className="card-image">
@@ -113,16 +127,23 @@ const Project = () => {
                                     ))}
                                 </div>
                                 <div className="card-body text-center d-flex flex-column">
-                                    <div className="ad-title m-auto">
+                                    <div className="project-title m-auto">
                                         <h5 className="text-uppercase">{project.title}</h5>
                                     </div>
                                     <p className="project-description">{project.description}</p>
                                     {project.link && (
                                         <a
-                                            className="ad-btn mt-auto"
+                                            className="project-btn mt-auto"
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            onClick={() => trackEvent("project_view", {
+                                                project_name: project.title,
+                                                project_category: project.category,
+                                                project_position: index + 1,
+                                                link_type: project.link.includes("github.com") ? "github" : "live_demo",
+                                                link_url: project.link,
+                                            })}
                                         >
                                             View
                                         </a>

@@ -62,7 +62,7 @@ const WorkExp = () => {
                     Work Experience
                 </h2>
                 <hr />
-                <Timeline items={jobs} />
+                <Timeline items={jobs} section="work_experience" />
             </div>
         </section>
     );

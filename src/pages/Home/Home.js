@@ -6,6 +6,7 @@ import { animate, motion, useInView, useReducedMotion } from "framer-motion";
 import { useTheme } from "../../Context/ThemeContext";
 import { BsFillMoonStarsFill, BsFillSunFill, BsArrowRight, BsDownload } from "react-icons/bs";
 import { Link } from "react-scroll";
+import { trackEvent } from "../../utils/analytics";
 
 // Real figures from the resume
 const stats = [
@@ -54,7 +55,9 @@ const Home = () => {
     const [theme, setTheme] = useTheme();
     const reduceMotion = useReducedMotion();
     const handleTheme = () => {
-        setTheme((prevState) => (prevState === "light" ? "dark" : "light"));
+        const next = theme === "light" ? "dark" : "light";
+        setTheme(next);
+        trackEvent("theme_toggle", { theme_selected: next });
     };
 
     return (
@@ -97,10 +100,16 @@ const Home = () => {
                             smooth={true}
                             offset={-100}
                             duration={100}
+                            onClick={() => trackEvent("cta_click", { cta_text: "Hire Me", cta_location: "hero" })}
                         >
                             Hire Me <BsArrowRight aria-hidden="true" />
                         </Link>
-                        <a className="btn btn-cv" href={Resume} download="Resume.pdf">
+                        <a
+                            className="btn btn-cv"
+                            href={Resume}
+                            download="Resume.pdf"
+                            onClick={() => trackEvent("resume_download", { file_name: "Resume.pdf", link_location: "hero" })}
+                        >
                             My Resume <BsDownload aria-hidden="true" />
                         </a>
                     </motion.div>

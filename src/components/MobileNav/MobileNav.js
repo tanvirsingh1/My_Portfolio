@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineMenuFold } from "react-icons/ai";
 import { Link } from "react-scroll";
 import { navItems } from "../../utils/navItems";
+import { trackEvent } from "../../utils/analytics";
 import "./MobileNav.css";
 const MobileNav = () => {
     const [open, setOpen] = useState(false);
@@ -13,7 +14,8 @@ const MobileNav = () => {
     };
 
     // handle menu clicks
-    const handleMenuClick = () => {
+    const handleMenuClick = (label) => {
+        trackEvent("navigation_click", { menu_item: label, nav_type: "mobile" });
         setOpen(false);
     };
     return (
@@ -48,7 +50,7 @@ const MobileNav = () => {
                                             smooth={true}
                                             offset={-100}
                                             duration={100}
-                                            onClick={handleMenuClick}
+                                            onClick={() => handleMenuClick(label)}
                                         >
                                             <Icon />
                                             {label}

@@ -6,6 +6,7 @@ import {
     useScroll,
     useSpring,
 } from "framer-motion";
+import { trackEvent } from "../../utils/analytics";
 import "./Timeline.css";
 
 const VISIBLE_POINTS = 3;
@@ -21,7 +22,7 @@ const chip = {
 };
 
 // item: { heading, badge?, subtitle, date, location, points, tags?, tagsLabel? }
-const TimelineCard = ({ item, reduceMotion }) => {
+const TimelineCard = ({ item, section, reduceMotion }) => {
     const [expanded, setExpanded] = useState(false);
     const extra = item.points.slice(VISIBLE_POINTS);
 
@@ -91,7 +92,10 @@ const TimelineCard = ({ item, reduceMotion }) => {
                     <button
                         type="button"
                         className="exp-toggle"
-                        onClick={() => setExpanded(!expanded)}
+                        onClick={() => {
+                            if (!expanded) trackEvent("details_expand", { section_name: section, item_name: item.heading });
+                            setExpanded(!expanded);
+                        }}
                         aria-expanded={expanded}
                     >
                         {expanded ? "Show less" : `Show all ${item.points.length}`}
@@ -119,7 +123,7 @@ const TimelineCard = ({ item, reduceMotion }) => {
     );
 };
 
-const Timeline = ({ items }) => {
+const Timeline = ({ items, section }) => {
     const timelineRef = useRef(null);
     const reduceMotion = useReducedMotion();
     const { scrollYProgress } = useScroll({
@@ -138,7 +142,7 @@ const Timeline = ({ items }) => {
             />
             <ol className="exp-list">
                 {items.map((item) => (
-                    <TimelineCard key={item.heading} item={item} reduceMotion={reduceMotion} />
+                    <TimelineCard key={item.heading} item={item} section={section} reduceMotion={reduceMotion} />
                 ))}
             </ol>
         </div>

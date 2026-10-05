@@ -12,8 +12,12 @@ import { useTheme } from "./Context/ThemeContext";
 import './App.css'
 import MobileNav from "./components/MobileNav/MobileNav";
 import NetworkBackground from "./components/Background/NetworkBackground";
+import { useSectionViews } from "./utils/analytics";
+
+const TRACKED_SECTIONS = ["home", "about", "work", "projects", "techstack", "education", "awards", "contact"];
 function App() {
   const [theme] = useTheme();
+  useSectionViews(TRACKED_SECTIONS);
   return (
     < >
       <div id={theme}>

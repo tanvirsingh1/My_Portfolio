@@ -31,7 +31,7 @@ const Education = () => {
                     Education
                 </h2>
                 <hr />
-                <Timeline items={schools} />
+                <Timeline items={schools} section="education" />
             </div>
         </section>
     );

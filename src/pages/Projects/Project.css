@@ -14,11 +14,11 @@
     color: gray;
 }
 
-#ads {
+#project-grid {
     margin: 30px 40px 30px 0px;
 }
 
-#ads .card-notify-badge {
+#project-grid .card-notify-badge {
     position: absolute;
     left: -10px;
     top: -20px;
@@ -83,7 +83,7 @@
     transition: all 1s ease;
 }
 
-.ad-btn {
+.project-btn {
     text-transform: uppercase;
     width: 150px;
     height: 40px;
@@ -106,7 +106,7 @@
     font-weight: 500;
 }
 
-.ad-btn:hover {
+.project-btn:hover {
     background-color: white;
     color: white;
     background: #04D9FF;
