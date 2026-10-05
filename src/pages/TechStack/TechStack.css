@@ -41,16 +41,27 @@
     margin-right: 10px;
 }
 
-.techstack .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: #04D9FF;
+.techstack .card {
+    border: 1px solid transparent;
+    transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
 
+/* Hover darkens the card and lights up the border and icon */
+.techstack .card:hover,
+#dark .techstack .card:hover {
+    background-color: #0f1b2d;
+    color: #f4f7fb;
+    border-color: rgba(4, 217, 255, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(4, 217, 255, 0.45);
+    transform: translateY(-3px);
 }
 
 #dark .techstack .card:hover {
-    color: #06232b;
+    background-color: #03060c;
+}
+
+.techstack .card:hover .tech-icon {
+    color: #04D9FF;
 }
 
 /* =============================== */

@@ -6,12 +6,10 @@
     --hero-stat-bg: rgba(14, 22, 36, 0.6);
     --hero-stat-border: rgba(4, 217, 255, 0.18);
 
-    min-height: 100vh;
-    min-height: 100dvh;
     display: flex;
     align-items: center;
     color: var(--hero-text);
-    padding: 40px 0px 60px 240px;
+    padding: 14vh 0px 40px 240px;
 }
 
 #light .home-container {
@@ -131,7 +129,7 @@
     line-height: 1.1;
 }
 
-.home-stats span {
+.home-stats li > span {
     display: block;
     margin-top: 4px;
     font-size: 13px;
