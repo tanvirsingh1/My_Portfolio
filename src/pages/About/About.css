@@ -70,3 +70,73 @@
 #dark .about {
     background-color: rgba(14, 18, 28, 0.75);
 }
+
+/* ===== Modern heading and photo ===== */
+.about {
+    padding: 36px;
+    border: 1px solid rgba(4, 217, 255, 0.15);
+}
+
+.about-img img {
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 14px;
+    margin-top: 0px;
+}
+
+.about-content {
+    align-items: flex-start;
+    padding-left: 24px;
+}
+
+.about-content h2 {
+    font-family: inherit;
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f1b2d;
+    border-bottom: none;
+    text-align: left;
+    padding: 0px 10px;
+    margin-bottom: 6px;
+}
+
+.about-content h2::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #04D9FF, #0f6e69);
+}
+
+.about-content p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0px;
+}
+
+#dark .about-content h2 {
+    color: #f4f7fb;
+}
+
+#dark .about-content p {
+    color: #d5dde6;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 20px;
+    }
+
+    .about-img img {
+        height: 320px;
+    }
+
+    .about-content {
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+}

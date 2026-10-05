@@ -28,3 +28,48 @@ body {
     position: relative;
     z-index: 1;
 }
+
+/* ===== SECTION HEADINGS (shared across all sections) ===== */
+.app-content h2.text-uppercase {
+    font-size: clamp(28px, 3.2vw, 40px);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #0f1b2d;
+}
+
+#dark .app-content h2.text-uppercase {
+    color: #f4f7fb;
+}
+
+.app-content h2.text-uppercase + hr {
+    width: 72px;
+    height: 4px;
+    border: 0;
+    opacity: 1;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #04D9FF, #0f6e69);
+    margin: 14px auto 44px;
+}
+
+/* ===== SIDEBAR MENU SPACING (beats Bootstrap .nav-link defaults) ===== */
+.sidebar .nav-items {
+    padding: 0px 14px;
+}
+
+.sidebar .nav-items .nav-item {
+    padding: 0px;
+}
+
+.sidebar .nav-items .nav-link {
+    padding: 0px;
+}
+
+.sidebar:not(.sidebar-toggle) .nav-items {
+    padding: 0px;
+}
+
+/* Brighter teal for sub-headings on the dark background */
+#dark .techstack-category,
+#dark .awards-subheading {
+    color: #5fd6cf;
+}

@@ -5,7 +5,7 @@ import "./NetworkBackground.css";
 // Node colors per theme, as "r, g, b" so alpha can vary per line
 const PALETTE = {
     light: { node: "15, 110, 140", link: "15, 110, 140", cursor: "4, 160, 200" },
-    dark: { node: "4, 217, 255", link: "4, 217, 255", cursor: "120, 235, 255" },
+    dark: { node: "4, 217, 255", link: "4, 217, 255", cursor: "150, 240, 255" },
 };
 
 const LINK_DISTANCE = 140;
@@ -57,7 +57,7 @@ const NetworkBackground = ({ theme }) => {
                     const b = nodes[j];
                     const dist = Math.hypot(a.x - b.x, a.y - b.y);
                     if (dist < LINK_DISTANCE) {
-                        ctx.strokeStyle = `rgba(${colors.link}, ${0.22 * (1 - dist / LINK_DISTANCE)})`;
+                        ctx.strokeStyle = `rgba(${colors.link}, ${(theme === "dark" ? 0.3 : 0.22) * (1 - dist / LINK_DISTANCE)})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(a.x, a.y);

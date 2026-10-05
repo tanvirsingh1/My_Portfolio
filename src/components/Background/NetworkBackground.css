@@ -4,6 +4,7 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .network-bg canvas {
@@ -22,4 +23,57 @@
         radial-gradient(circle at 15% 10%, rgba(4, 217, 255, 0.1), transparent 45%),
         radial-gradient(circle at 85% 85%, rgba(15, 110, 105, 0.14), transparent 50%),
         #060a12;
+}
+
+/* Slow drifting aurora glows behind the node network */
+.network-bg::before,
+.network-bg::after {
+    content: "";
+    position: absolute;
+    width: 60vmax;
+    height: 60vmax;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    will-change: transform;
+}
+
+.network-bg::before {
+    top: -20vmax;
+    left: -10vmax;
+    background: radial-gradient(circle, rgba(4, 217, 255, 0.55), transparent 65%);
+    animation: aurora-drift-a 24s ease-in-out infinite alternate;
+}
+
+.network-bg::after {
+    bottom: -25vmax;
+    right: -15vmax;
+    background: radial-gradient(circle, rgba(64, 120, 255, 0.45), transparent 65%);
+    animation: aurora-drift-b 30s ease-in-out infinite alternate;
+}
+
+.network-bg-light::before,
+.network-bg-light::after {
+    opacity: 0.22;
+}
+
+.network-bg canvas {
+    position: relative;
+}
+
+@keyframes aurora-drift-a {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(18vw, 14vh) scale(1.15); }
+}
+
+@keyframes aurora-drift-b {
+    from { transform: translate(0, 0) scale(1.1); }
+    to { transform: translate(-16vw, -12vh) scale(0.95); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .network-bg::before,
+    .network-bg::after {
+        animation: none;
+    }
 }
