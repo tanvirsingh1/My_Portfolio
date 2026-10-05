@@ -17,6 +17,6 @@ export const navItems = [
     { to: "projects", label: "Projects", icon: FcVideoProjector },
     { to: "techstack", label: "Skills", icon: FcBiotech },
     { to: "education", label: "Education", icon: FcReadingEbook },
-    { to: "awards", label: "Awards & Leadership", icon: FcRatings },
+    { to: "awards", label: "Awards", icon: FcRatings },
     { to: "contact", label: "Contact", icon: FcBusinessContact },
 ];

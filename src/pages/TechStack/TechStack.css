@@ -49,8 +49,8 @@
 
 }
 
-#dark .techstack .card {
-    background-color: white;
+#dark .techstack .card:hover {
+    color: #06232b;
 }
 
 /* =============================== */

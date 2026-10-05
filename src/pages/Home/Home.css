@@ -104,3 +104,28 @@
         font-size: 24px;
     }
 }
+/* ===== LIGHT MODE (hero sits on the animated background) ===== */
+#light .home-container {
+    color: #0f1b2d;
+}
+
+#light .home-content h1 {
+    color: #0b7c99;
+}
+
+#light .home-subtext {
+    color: #4a5568;
+}
+
+#light .home-buttons .btn-hire,
+#light .home-buttons .btn-cv {
+    color: #0f1b2d;
+    border-color: #0b7c99;
+}
+
+#light .home-buttons .btn-hire:hover,
+#light .home-buttons .btn-cv:hover {
+    color: #06232b;
+    background-color: #04D9FF;
+    border-color: #04D9FF;
+}

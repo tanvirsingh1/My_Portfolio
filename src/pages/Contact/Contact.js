@@ -110,7 +110,7 @@ const Contact = () => {
                                 animate={{ opacity: 1, y: 0 }}
                             >
                                 <BsCheckCircleFill aria-hidden="true" />
-                                Thanks, your message is on its way. I'll reply soon.
+                                <span>Thanks, your message is on its way. I'll reply soon.</span>
                             </motion.p>
                         )}
                         {status === "error" && (
@@ -120,7 +120,10 @@ const Contact = () => {
                                 animate={{ opacity: 1, y: 0 }}
                             >
                                 <BsExclamationCircleFill aria-hidden="true" />
-                                Something went wrong. Please email me directly at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+                                <span>
+                                    Something went wrong. Please email me directly at{" "}
+                                    <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+                                </span>
                             </motion.p>
                         )}
                     </div>

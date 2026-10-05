@@ -60,3 +60,13 @@
         margin-top: 10px;
     }
 }
+/* Readable surface over the animated background */
+.about {
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(6px);
+    border-radius: 14px;
+}
+
+#dark .about {
+    background-color: rgba(14, 18, 28, 0.75);
+}

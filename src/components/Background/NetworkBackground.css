@@ -1,0 +1,25 @@
+/* Fixed full-page layer behind all content (see .app-content in App.css) */
+.network-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.network-bg canvas {
+    display: block;
+}
+
+.network-bg-light {
+    background:
+        radial-gradient(circle at 15% 10%, rgba(4, 217, 255, 0.12), transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(15, 110, 105, 0.1), transparent 50%),
+        #f3f7fb;
+}
+
+.network-bg-dark {
+    background:
+        radial-gradient(circle at 15% 10%, rgba(4, 217, 255, 0.1), transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(15, 110, 105, 0.14), transparent 50%),
+        #060a12;
+}

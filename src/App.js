@@ -11,31 +11,35 @@ import ScrollToTop from "react-scroll-to-top";
 import { useTheme } from "./Context/ThemeContext";
 import './App.css'
 import MobileNav from "./components/MobileNav/MobileNav";
+import NetworkBackground from "./components/Background/NetworkBackground";
 function App() {
   const [theme] = useTheme();
   return (
     < >
       <div id={theme}>
-        <MobileNav />
-        <Layout />
-        <div className="container">
-          <About />
-          <WorkExp />
-          <Project />
-          <TechStack />
-          <Education />
-          <Awards />
-          <Contact />
+        <NetworkBackground theme={theme} />
+        <div className="app-content">
+          <MobileNav />
+          <Layout />
+          <div className="container">
+            <About />
+            <WorkExp />
+            <Project />
+            <TechStack />
+            <Education />
+            <Awards />
+            <Contact />
+          </div>
+          <div className="footer pb-3 ms-3">
+
+
+
+          </div>
+          <ScrollToTop
+            smooth
+            className="scroll-to-top" // Apply the CSS class
+          />
         </div>
-        <div className="footer pb-3 ms-3">
-
-
-
-        </div>
-        <ScrollToTop
-          smooth
-          className="scroll-to-top" // Apply the CSS class
-        />
       </div>
     </>
   );

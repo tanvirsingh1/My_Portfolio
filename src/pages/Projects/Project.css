@@ -137,3 +137,6 @@
         margin-top: 30px;
     }
 }
+#dark .project .card:hover {
+    background-color: rgba(20, 26, 40, 0.92);
+}

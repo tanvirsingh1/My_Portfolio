@@ -1,7 +1,7 @@
 .sidebar-section {
     display: flex;
     width: 100%;
-    background-color: black;
+    background-color: transparent;
 }
 
 .sidebar {
